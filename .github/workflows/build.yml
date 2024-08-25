@@ -1,0 +1,24 @@
+name: Flutter Workflow
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  flutter_job:
+    runs-on: macos-latest
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: pubspec.yml
+        run: flutter --version
+
+      - name: Install Dependencies
+        run: flutter pub get
