@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/constants.dart';
+import '../../../../core/theme/colors.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -10,8 +10,8 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Search'),
-        foregroundColor: kWhite,
-        backgroundColor: kPrimary,
+        foregroundColor: Colours.kWhite,
+        backgroundColor: Colours.kPrimary,
       ),
       body: Container(),
     );

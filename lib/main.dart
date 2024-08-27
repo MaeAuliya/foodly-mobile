@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import 'core/constants/constants.dart';
-import 'features/main/views/entrypoint.dart';
+import 'core/services/router/router.dart';
+import 'core/theme/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,27 +11,23 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
-
     return ScreenUtilInit(
-      designSize: Size(width, height),
+      designSize: const Size(375, 825),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, _) {
-        debugPrint(width.toString());
-        debugPrint(height.toString());
         return GetMaterialApp(
           title: 'Foodly',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            scaffoldBackgroundColor: kOffWhite,
-            iconTheme: const IconThemeData(color: kDark),
-            primarySwatch: Colors.grey
-          ),
-          home: const MainScreen(),
+              scaffoldBackgroundColor: Colours.kOffWhite,
+              iconTheme: const IconThemeData(color: Colours.kDark),
+              primarySwatch: Colors.grey),
+          initialRoute: AppRoutes.getInitialRoute(),
+          getPages: AppRoutes.routes,
         );
       },
     );

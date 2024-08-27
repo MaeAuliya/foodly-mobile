@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/constants.dart';
+import '../../../../core/theme/colors.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -10,8 +10,8 @@ class CartPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cart'),
-        foregroundColor: kWhite,
-        backgroundColor: kPrimary,
+        foregroundColor: Colours.kWhite,
+        backgroundColor: Colours.kPrimary,
       ),
       body: Container(),
     );

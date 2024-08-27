@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../features/cart/views/cart_page.dart';
-import '../../features/home/views/home_page.dart';
-import '../../features/profile/views/profile_page.dart';
-import '../../features/search/views/search_page.dart';
+import '../../features/cart/presentation/views/cart_page.dart';
+import '../../features/home/presentation/views/home_page.dart';
+import '../../features/profile/presentation/views/profile_page.dart';
+import '../../features/search/presentation/views/search_page.dart';
 
 class TabIndexController extends GetxController {
   RxInt _tabIndex = 0.obs;
