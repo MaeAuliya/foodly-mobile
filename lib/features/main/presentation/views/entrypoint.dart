@@ -43,6 +43,7 @@ class MainScreen extends StatelessWidget {
                     BottomNavigationBarItem(
                         icon: Icon(Icons.person), label: 'Profile')
                   ])),
-        ));
+        )
+    );
   }
 }

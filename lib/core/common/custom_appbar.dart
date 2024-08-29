@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
+import '../../features/home/presentation/controllers/home_controller.dart';
 import '../constants/constants.dart';
 import '../theme/app_style.dart';
 import '../theme/colors.dart';
@@ -11,12 +13,15 @@ class CustomAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final HomeController controller = Get.put(HomeController());
+
+    return Obx(() => Container(
       padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
       height: 110.h,
       width: width,
       color: Colours.kOffWhite,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const CircleAvatar(
             radius: 25,
@@ -41,9 +46,13 @@ class CustomAppbar extends StatelessWidget {
                 )
               ],
             ),
+          ),
+          Text(
+            controller.userTime,
+            style: const TextStyle(fontSize: 25),
           )
         ],
       ),
-    );
+    ));
   }
 }

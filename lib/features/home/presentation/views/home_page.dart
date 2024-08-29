@@ -13,14 +13,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colours.kPrimary,
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(130.h),
-          child: const CustomAppbar()
-      ),
-      body: SafeArea(
-          child: CustomContainer(
-              containerContent: Container()
-          )
-      ),
+          preferredSize: Size.fromHeight(130.h), child: const CustomAppbar()),
+      body: SafeArea(child: CustomContainer(containerContent: Container())),
     );
   }
 }
