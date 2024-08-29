@@ -7,10 +7,10 @@ import '../../features/profile/presentation/views/profile_page.dart';
 import '../../features/search/presentation/views/search_page.dart';
 
 class TabIndexController extends GetxController {
-  RxInt _tabIndex = 0.obs;
+  final RxInt _tabIndex = 0.obs;
   int get tabIndex => _tabIndex.value;
 
-  RxList<Widget> _screens = <Widget>[].obs;
+  final RxList<Widget> _screens = <Widget>[].obs;
   List<Widget> get screens => _screens;
 
   @override
