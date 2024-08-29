@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../core/controller/tab_index_controller.dart';
 import '../../../../core/theme/colors.dart';
+import '../controllers/tab_index_controller.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
