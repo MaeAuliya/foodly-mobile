@@ -3,6 +3,7 @@ import 'package:dartz/dartz.dart';
 import '../../../../core/constants/typedef.dart';
 import '../../../../core/errors/exceptions.dart';
 import '../../../../core/errors/failure.dart';
+import '../../domain/entities/category.dart';
 import '../../domain/repositories/home_repository.dart';
 import '../datasources/home_local_data_source.dart';
 
@@ -15,6 +16,16 @@ class HomeRepositoryImpl implements HomeRepository {
   ResultFuture<String> getUserTime() async {
     try {
       final result = await _localDataSource.getUserTime();
+      return Right(result);
+    } on LocalException catch (e) {
+      return Left(LocalFailure.fromException(e));
+    }
+  }
+
+  @override
+  ResultFuture<List<FoodCategory>> getAllCategory() async {
+    try {
+      final result = await _localDataSource.getAllCategory();
       return Right(result);
     } on LocalException catch (e) {
       return Left(LocalFailure.fromException(e));

@@ -31,6 +31,8 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.grey),
           initialRoute: AppRoutes.getInitialRoute(),
           getPages: AppRoutes.routes,
+          defaultTransition: Transition.fadeIn,
+          transitionDuration: const Duration(milliseconds: 400),
         );
       },
     );

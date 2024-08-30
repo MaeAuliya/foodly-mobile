@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../features/home/presentation/controllers/home_controller.dart';
-import '../constants/constants.dart';
-import '../theme/app_style.dart';
-import '../theme/colors.dart';
-import 'reusable_text.dart';
+import '../controllers/home_controller.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/theme/app_style.dart';
+import '../../../../core/theme/colors.dart';
+import '../../../../core/common/reusable_text.dart';
 
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({super.key});
@@ -16,7 +16,7 @@ class CustomAppbar extends StatelessWidget {
     final HomeController controller = Get.put(HomeController());
 
     return Obx(() => Container(
-      padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+      padding: EdgeInsets.only(left: 12.w, right: 12.w, top: 24.h),
       height: 110.h,
       width: width,
       color: Colours.kOffWhite,

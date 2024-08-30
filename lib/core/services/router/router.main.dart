@@ -5,6 +5,10 @@ class AppRoutes {
 
   static List<GetPage> routes = [
     // Main Screen
-    GetPage(name: MainScreen.routeName, page: () => const MainScreen())
+    GetPage(name: MainScreen.routeName, page: () => const MainScreen()),
+    // All Category Screen
+    GetPage(name: AllCategoryPage.routeName, page: () => const AllCategoryPage()),
+
+    GetPage(name: CategoryPage.routeName, page: () => const CategoryPage()),
   ];
 }

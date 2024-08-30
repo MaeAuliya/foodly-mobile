@@ -10,6 +10,7 @@ class DependencyInjection{
     Get.lazyPut<HomeRepository>(() => HomeRepositoryImpl(Get.find()));
     // Usecases
     Get.lazyPut(() => GetUserTime(Get.find()));
+    Get.lazyPut(() => GetAllCategory(Get.find()));
     // Datasources
     Get.lazyPut<HomeLocalDataSource>(() => const HomeLocalDataSourceImpl());
   }
